@@ -13,15 +13,17 @@
 .nav-list {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px;
 }
 .nav-link {
   position: relative;
   display: block;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.02em;
   transition: 200ms ease-in;
+  font-size: 1.6em;
 }
 .nav-link:hover,
 .nav-link:focus {
