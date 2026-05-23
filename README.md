@@ -43,7 +43,11 @@ Gallery card markup template:
 ```html
 <li class="gallery-item">
     <a class="gallery-link" href="large-image.jpg">
-        <img class="gallery-image" src="small-image.jpg" alt="Image description" />
+        <img
+            class="gallery-image"
+            src="small-image.jpg"
+            alt="Image description"
+        />
     </a>
 </li>
 ```
@@ -126,9 +130,9 @@ Acceptance criteria:
 - On page reload the data from local storage is restored into the form fields,
   with no `undefined` values.
 - On submit there is a check that both form elements are filled in.
-- On submit, if both elements are filled, the object with `email`, `message`
-  and their current values is logged to the console, and the storage and form
-  fields are cleared.
+- On submit, if both elements are filled, the object with `email`, `message` and
+  their current values is logged to the console, and the storage and form fields
+  are cleared.
 - After a submit, typing into any form element does not bring back data from the
   previous submit.
 
@@ -184,10 +188,9 @@ the live page opens.
 
 The production version of the project is automatically built and deployed to
 GitHub Pages, into the `gh-pages` branch, every time the `main` branch is
-updated — for example, after a direct push or a merged pull request. For this
-to work, in `package.json` set the `--base=/<REPO>/` flag of the `build`
-command, replacing `<REPO>` with your repository name, and push the changes to
-GitHub.
+updated — for example, after a direct push or a merged pull request. For this to
+work, in `package.json` set the `--base=/<REPO>/` flag of the `build` command,
+replacing `<REPO>` with your repository name, and push the changes to GitHub.
 
 ```json
 "build": "vite build --base=/<REPO>/",
@@ -222,10 +225,8 @@ incorrect.
 
 1. After every push to the `main` branch of the GitHub repository, a special
    script (GitHub Action) from the `.github/workflows/deploy.yml` file runs.
-2. All repository files are copied to a server, where the project is
-   initialized and goes through linting and building before deployment.
+2. All repository files are copied to a server, where the project is initialized
+   and goes through linting and building before deployment.
 3. If all steps pass, the built production version of the project files is
    pushed to the `gh-pages` branch. Otherwise, the script's execution log will
-   indicate the problem.
-</content>
-</invoke>
+   indicate the problem. </content> </invoke>
